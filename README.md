@@ -1,93 +1,168 @@
-# Veegil
+# CredPal-Test
 
+This README file provides an overview of the demo built for this virtual test
 
+## Candidate Details
 
-## Getting started
+### Name
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- Ebenmelu Ifechukwu Noah - [LinkedIn](https://www.linkedin.com/in/ebenmelu-ifechukwu/ "View my linkedIn profile")
+- Ebenmelu Ifechukwu - Indeed
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Contact Details
 
-## Add your files
+- [iebenmelu@gmail.com](mailto:iebenmelu@gmail.com "Send an email")
+- [07065478947](tel:+2347065478947 "Call me")
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### Work
+
+Mobile Application Developer with a little over 1 year working experience using Flutter and Dart, and in the past, have worked as a Native Android developer building high performant native Android applications. I have been building Native Android applications for years because I am passionate about android apps, before I discovered cross-platform development mobile app development using Flutter
+
+### Relevant Skills
+
+Dart, Java, Kotlin, Flutter, Android S.D.K, Git, GitHub Actions...
+
+## Project Overview
+
+This project is aimed at building a cross-platform mobile application using the Flutter framework.
+
+## Instructions
+
+You are required to implement the UI given in the figma link below using Flutter,
+your code is required to run on web, ios or an android device.
+
+The purpose of this test is to examine your UI execution skills, therefore you
+are required to pay attention to the smallest detail provided in the Figma
+design
+
+## Deliverables
+
+- A github repository of your implementation, you are required to commit your work progressively.
+- A zip file containing output of your implementation. This could be a web release folder or an .apk file.
+- Screenshots from your finished product.
+- Any instructions to run your code including any assumptions made during your implementation should be included in your readme.
+
+## Getting Started
+
+To get started with the project, follow the steps below:
+
+### Prerequisites
+
+- **Flutter SDK**: Install the latest stable version of Flutter. The project uses this constraints: SDK >=3.0.5 <4.0.0. But installing the latest version of Flutter would run everything just fine.
+- **Android Tools**: The app targets Android API level **30** (this should have been updated to target the latest, but time didn't allow for that), so ensure that you have installed Android command line tools and everything related to it using Android Studio
+- **Dart**: Ensure you have Dart programming language installed along with the Flutter SDK.
+- **IDE**: Choose an Integrated Development Environment (IDE) for Flutter development.
+
+### Installation
+
+1. Clone the project repository using the following command:
+
+   ```
+   git clone https://github.com/noahweasley/CredPal-Test.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd CredPal-Test
+   ```
+
+3. Fetch the dependencies by running the following command:
+
+   ```
+   flutter pub get
+   ```
+
+## Running the App For Debugging
+
+To run the application, execute the following command in the project directory:
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/noahweasley/veegil.git
-git branch -M main
-git push -uf origin main
+flutter run
 ```
 
-## Integrate with your tools
+_This will launch the application on an available emulator or connected device_
 
-- [ ] [Set up project integrations](https://gitlab.com/noahweasley/veegil/-/settings/integrations)
+Visit this page: [How to Run Flutter app on android emulator](https://docs.flutter.dev/get-started/test-drive)
 
-## Collaborate with your team
+## Testing
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+**Tests weren't implemented for this project because of the time frame. The project includes only an empty test**
 
-## Test and Deploy
+## Building the app
 
-Use the built-in continuous integration in GitLab.
+This project was tested on Web, and works on Android, iOS should work, but wasn't tested on the device. Making network calls on the app using Web generate errors because CORS isn't enabled.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+### Building for Android
 
-***
+To build for Android without splitting the ABIs, execute the following command in the project directory:
 
-# Editing this README
+```
+flutter build apk
+```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+To build for Android splitting the ABIs, execute the following command in the project directory:
 
-## Suggestions for a good README
+```
+flutter build apk --split-abis
+```
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+_Gradle download and some other project configurations would be performed in the background, so make sure you are connected to a stable internet connection_
 
-## Name
-Choose a self-explaining name for your project.
+### Installing the app
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+```
+flutter install
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Project Structure
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+This section states the overall structure of the app, the architecture, working principle, logic, trade-offs and design of the UI
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### SDK and Libraries
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+The application was built using Flutter. State management and Routing was built using GetX, Network API calls where made using Dio, and Local storage to disk was built using Hive.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### Architecture
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+The project uses a feature based folder structure, to ensure that if the application features grows, the complexity of the application remains reduced, basically structured as:
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- api
+  - repositories
+  - services
+    - enums
+    - exceptions
+    - helpers
+    - requests
+    - resources
+    - responses
+- core
+  - constants
+  - database
+    - adapters
+    - objects
+  - navigation
+  - utilities
+    - extensions
+  - validators
+  - widgets
+- features
+  - authentication
+    - controllers
+    - screens
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+_Where_:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- **api**: represents every logic relating to request to the banking apis are stored
+- **core**: represents the majority of the reusable components are stored. Components that are used throughout the app
+- **features**: represents the individual features in the app as can be categorized by the user. Authentication is a feature and each feature has two sub-folders; **controllers** and **screens**. **controllers** is where the business logic of each screen are stored, while, **screens** are the UI displayed to the user in the app.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## App Design
 
-## License
-For open source projects, say how it is licensed.
+This section aims to help the one assessing this, understand the thought process, design and every other thing concerning the app
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+# Screenshot
+
+## Conclusion
+
+This readme provides a brief overview of the Flutter project, including setup instructions, project structure, and additional resources.
